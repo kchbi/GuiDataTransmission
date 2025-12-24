@@ -1,0 +1,5 @@
+# For image handling in the GUI
+Pillow
+
+# For serial port communication (DO NOT use 'pip install serial')
+pyserial

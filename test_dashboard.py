@@ -22,7 +22,7 @@ class TestDashboardApp:
         self.assembly_config = self.config['assemblies'][self.assembly_name]
 
         self.root.title(f"Match Network Analyzer - {self.assembly_name}")
-        self.root.geometry("850x600")
+        self.root.geometry("1020x720")
 
         # Serial Communication State
         self.serial_port = None

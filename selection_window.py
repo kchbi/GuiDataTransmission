@@ -6,7 +6,7 @@ from test_dashboard import TestDashboardApp # We will create this file next
 class SelectionWindow:
     def __init__(self, root):
         self.root = root
-        self.root.title("Select a Match")
+        self.root.title("Select a Option")
         self.root.geometry("300x400")
 
         try:

@@ -3,7 +3,37 @@
     "Matching Network": {
       "firmwareFile": "firmware/Matching_Network/Matching_Network.hex",
       "flashCommand": "STM32_Programmer_CLI.exe -c port=SWD -d {firmware_path} -v -hardRst",
-"parameters": [
+      "parameters": [
+        { "name": "X1 Time Min->Max", "min": 0.00, "max": 0.73 },
+        { "name": "X1 Time Max->Min", "min": 0.00, "max": 0.73 },
+        { "name": "X2 Time Min->Max", "min": 0.00, "max": 0.78 },
+        { "name": "X2 Time Max->Min", "min": 0.00, "max": 0.73 },
+        { "name": "X1 +15V I Min->Max", "min": 0.00, "max": 0.12 },
+        { "name": "X1 -15V I Min->Max", "min": 0.00, "max": 0.06 },
+        { "name": "X1 +24V I Min->Max", "min": 0.00, "max": 0.35 },
+        { "name": "X1 +15V I Max->Min", "min": 0.00, "max": 0.12 },
+        { "name": "X1 -15V I Max->Min", "min": 0.00, "max": 0.06 },
+        { "name": "X1 +24V I Max->Min", "min": 0.00, "max": 0.35 },
+        { "name": "X2 +15V I Min->Max", "min": 0.00, "max": 0.12 },
+        { "name": "X2 -15V I Min->Max", "min": 0.00, "max": 0.06 },
+        { "name": "X2 +24V I Min->Max", "min": 0.00, "max": 0.40 },
+        { "name": "X2 +15V I Max->Min", "min": 0.00, "max": 0.12 },
+        { "name": "X2 -15V I Max->Min", "min": 0.00, "max": 0.06 },
+        { "name": "X2 +24V I Max->Min", "min": 0.00, "max": 0.40 },
+        { "name": "X1 Min Pos V", "min": 0.90, "max": 1.20 },
+        { "name": "X1 Max Pos V", "min": 3.50, "max": 4.00 },
+        { "name": "X2 Min Pos V", "min": 0.90, "max": 1.20 },
+        { "name": "X2 Max Pos V", "min": 3.50, "max": 4.00 },
+        { "name": "X1 Lag Min->Max", "min": -0.20, "max": 0.25 },
+        { "name": "X1 Lag Max->Min", "min": -0.20, "max": 0.25 },
+        { "name": "X2 Lag Min->Max", "min": -0.20, "max": 0.25 },
+        { "name": "X2 Lag Max->Min", "min": -0.20, "max": 0.25 }
+      ]
+    },
+    "Display Code": {
+      "firmwareFile": "firmware/OLED/OLED.hex",
+      "flashCommand": "STM32_Programmer_CLI.exe -c port=SWD -d {firmware_path} -v -hardRst",
+      "parameters": [
         { "name": "X1 Time Min->Max", "min": 0.00, "max": 4.00 },
         { "name": "X1 Time Max->Min", "min": 0.00, "max": 4.00 },
         { "name": "X2 Time Min->Max", "min": 0.00, "max": 4.00 },
@@ -30,34 +60,20 @@
         { "name": "X2 Step Max->Min", "min": -1.00, "max": 1.00 }
       ]
     },
-    "Display Code": {
-      "firmwareFile": "firmware/OLED/OLED.hex",
+    "Potentiometer Calbration": {
+      "firmwareFile": "firmware/PotentioMeterCalibration/PotentioMeterCalibration.hex",
       "flashCommand": "STM32_Programmer_CLI.exe -c port=SWD -d {firmware_path} -v -hardRst",
-"parameters": [
-        { "name": "X1 Time Min->Max", "min": 0.00, "max": 4.00 },
-        { "name": "X1 Time Max->Min", "min": 0.00, "max": 4.00 },
-        { "name": "X2 Time Min->Max", "min": 0.00, "max": 4.00 },
-        { "name": "X2 Time Max->Min", "min": 0.00, "max": 4.00 },
-        { "name": "X1 +15V I Min->Max", "min": 0.00, "max": 0.20 },
-        { "name": "X1 -15V I Min->Max", "min": 0.00, "max": 0.20 },
-        { "name": "X1 +24V I Min->Max", "min": 0.00, "max": 0.30 },
-        { "name": "X1 +15V I Max->Min", "min": 0.00, "max": 0.20 },
-        { "name": "X1 -15V I Max->Min", "min": 0.00, "max": 0.20 },
-        { "name": "X1 +24V I Max->Min", "min": 0.00, "max": 0.30 },
-        { "name": "X2 +15V I Min->Max", "min": 0.00, "max": 0.20 },
-        { "name": "X2 -15V I Min->Max", "min": 0.00, "max": 0.20 },
-        { "name": "X2 +24V I Min->Max", "min": 0.00, "max": 0.30 },
-        { "name": "X2 +15V I Max->Min", "min": 0.00, "max": 0.20 },
-        { "name": "X2 -15V I Max->Min", "min": 0.00, "max": 0.20 },
-        { "name": "X2 +24V I Max->Min", "min": 0.00, "max": 0.30 },
-        { "name": "X1 Min Pos V", "min": -5.00, "max": 0.00 },
-        { "name": "X1 Max Pos V", "min": 0.00, "max": 5.00 },
-        { "name": "X2 Min Pos V", "min": -5.00, "max": 0.00 },
-        { "name": "X2 Max Pos V", "min": 0.00, "max": 5.00 },
-        { "name": "X1 Step Min->Max", "min": -1.00, "max": 1.00 },
-        { "name": "X1 Step Max->Min", "min": -1.00, "max": 1.00 },
-        { "name": "X2 Step Min->Max", "min": -1.00, "max": 1.00 },
-        { "name": "X2 Step Max->Min", "min": -1.00, "max": 1.00 }
+      "parameters": [
+        { "name": "X1 Pos V", "min": 1, "max": 4.00 },
+        { "name": "X2 Pos V", "min": 1, "max": 4.00 }
+      ]
+    },
+    "Relay Matching Network": {
+      "firmwareFile": "firmware/PotentioMeterCalibration/PotentioMeterCalibration.hex",
+      "flashCommand": "STM32_Programmer_CLI.exe -c port=SWD -d {firmware_path} -v -hardRst",
+      "parameters": [
+        { "name": "X1 Pos V", "min": 1, "max": 4.00 },
+        { "name": "X2 Pos V", "min": 1, "max": 4.00 }
       ]
     }
   }
