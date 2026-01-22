@@ -1,5 +1,13 @@
-# For image handling in the GUI
-Pillow
+# Image handling for Tkinter GUI
+Pillow>=9.0,<11.0
 
-# For serial port communication (DO NOT use 'pip install serial')
-pyserial
+# Serial port communication
+pyserial>=3.5,<4.0
+
+
+# Report Generation in Excel 
+openpyxl 
+
+# Report Generation in PDF Form
+
+reportlab 

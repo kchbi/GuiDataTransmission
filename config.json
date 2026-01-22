@@ -30,7 +30,7 @@
         { "name": "X2 Lag Max->Min", "min": -0.20, "max": 0.25 }
       ]
     },
-    "Display Code": {
+    "Upper Match": {
       "firmwareFile": "firmware/OLED/OLED.hex",
       "flashCommand": "STM32_Programmer_CLI.exe -c port=SWD -d {firmware_path} -v -hardRst",
       "parameters": [

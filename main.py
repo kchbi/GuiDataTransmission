@@ -5,6 +5,19 @@ from PIL import Image, ImageTk
 # Import the main selection window class from your existing file
 from selection_window import SelectionWindow
 
+
+import sys
+import os
+
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS  # PyInstaller temp folder
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
+
 class SplashScreen:
     def __init__(self, root, on_close):
         """
@@ -27,7 +40,7 @@ class SplashScreen:
         # --- Load and Display Logo ---
         try:
             # Use Pillow to open the image and create a PhotoImage
-            logo_image = Image.open("OrbitandSkyline.jpg")
+            logo_image = Image.open(resource_path("OrbitandSkyline.jpg"))
             # Resize the image if necessary (e.g., to a width of 300px)
             logo_image = logo_image.resize((300, 150), Image.Resampling.LANCZOS)
             self.logo = ImageTk.PhotoImage(logo_image)
@@ -83,7 +96,8 @@ if __name__ == "__main__":
     # and all subsequent Toplevel windows.
     try:
         # NOTE: You must provide a '.ico' file for this to work.
-        root.iconbitmap('logo.ico') 
+        root.iconbitmap(resource_path("logo.ico"))
+
     except tk.TclError:
         print("Warning: 'logo.ico' not found. The application will use the default icon.")
     # --- MODIFICATION END ---
