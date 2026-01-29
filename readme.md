@@ -35,3 +35,8 @@ After completing the setup, you are ready to run the analyzer.
 
 2.  **Launch the Program:**
     *   In the same application folder, double-click `main.py` or run the command: `python main.py`
+
+3  **Changes Required:** 
+    *   Serial Number for Assemblies 
+    *   Assembly for Part Number
+    *   
